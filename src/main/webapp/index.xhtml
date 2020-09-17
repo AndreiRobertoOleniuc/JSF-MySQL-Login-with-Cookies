@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    </h:head>
+    <h:body class="bg-info text-light">
+        <div>
+            <h:form>
+                <div class="container mt-5">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-2">
+                        </div>
+                        <div class="col-md-auto"> 
+                            <p class="h1">Login Page</p>
+                        </div>
+                        <div class="col col-lg-2">
+                        </div>
+                    </div> 
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-2">
+                        </div>
+                        <div class="col-md-auto"> 
+                            <p class="h4">Email</p>
+                            <h:inputText value="#{model.emailEingabe}"/>
+                        </div>
+                        <div class="col col-lg-2">
+                        </div>
+                    </div> 
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-2">
+                        </div>
+                        <div class="col-md-auto"> 
+                            <p class="h4">Password</p>
+                            <h:inputText value="#{model.passwordEingabe}"/>
+                        </div>
+                        <div class="col col-lg-2">
+                        </div>
+                    </div>   
+                    <div class="row justify-content-md-center mt-3">
+                        <div class="col col-lg-2">
+                        </div>
+                        <div class="col-md-auto">
+                          <h:commandButton value="Login " class="btn btn-light" action="#{model.login}"/>  
+                        </div>
+                        <div class="col col-lg-2">
+                        </div>
+                    </div> 
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-2">
+                        </div>
+                        <div class="col-md-auto">
+                          <h1>#{model.check}</h1> 
+                        </div>
+                        <div class="col col-lg-2">
+                            <h4>#{model.cookieC}</h4>
+                        </div>
+                    </div>   
+                </div>
+            </h:form>
+        </div>
+        <script>
+            window.onload = function() {
+                console.log("Hello");
+                #{model.checkCookie()};
+            };
+        </script>
+    </h:body>
+</html>
+
